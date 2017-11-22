@@ -7,11 +7,9 @@ const ShowLink = ({active, children, onClick}) => {
 
 	return (
 		<a
-			href=""
-			onClick={(e) => { 
-				e.preventDefault()
-				onClick()
-			}}
+			className="ShowLink"
+			href="#"
+			onClick={(e) => {onClick()}}
 		>
 			{children}
 		</a>

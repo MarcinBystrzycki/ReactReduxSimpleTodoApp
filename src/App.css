@@ -1,25 +1,74 @@
-.App {
-  text-align: center;
+.AppDiv {
+  display: flex;
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.SortButtonsDiv {
+  width: 15%;
+  height: 100vh;
+  background-color: #2A2F3A;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.TodoListDiv {
+  width: 85%;
+  height: 100vh;
   padding: 20px;
-  color: white;
+  background-color: #f7f7f7;
 }
 
-.App-title {
-  font-size: 1.5em;
+.TodoListWrapper {
+
 }
 
-.App-intro {
-  font-size: large;
+.TodoList {
+  padding-left: 0;
+}
+
+.Todo {
+  position: relative;
+  list-style-type: none;
+  line-height: 50px;
+  height: 50px;
+  width: 500px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin: 10px;
+  background-color: white;
+}
+
+.Star {
+  position: absolute;
+  right: 10%;
+  top: 35%;
+  color: black;
+  font-size: 20px;
+}
+
+.StarO {
+  position: absolute;
+  right: 10%;
+  top: 35%;
+  color: lightgrey;
+  font-size: 20px;
+}
+
+.RemoveTodoButton {
+  position: absolute;
+  border-radius: 5px;
+  right: 0;
+  top: 0;
+  color: #d3d3d3;
+  border: none;
+  background-color: transparent;
+  transition: .3s;
+}
+
+.ShowLink {
+}
+
+.SortButtons {
+  list-style-type: none;
 }
 
 @keyframes App-logo-spin {

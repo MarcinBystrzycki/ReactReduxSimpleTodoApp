@@ -9,19 +9,19 @@ const initialState = [
 		id: 1,
 		text: 'Go outside',
 		done: true,
-		date: '15/05/2017'
+		date: '2017-05-16'
 	},
 	{
 		id: 2,
 		text: 'Feed cat',
 		done: false,
-		date: '16/05/2017'
+		date: '2017-05-16'
 	},
 	{
 		id: 3,
 		text: 'Sleep outside',
 		done: true,
-		date: '15/05/2017'
+		date: '2017-05-15'
 	}
 ];
 
