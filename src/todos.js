@@ -7,19 +7,43 @@ import {
 const initialState = [
 	{
 		id: 1,
-		text: 'Go outside',
+		text: 'Page changes',
 		done: true,
 		date: '2017-05-16'
 	},
 	{
 		id: 2,
-		text: 'Feed cat',
+		text: 'Review of last issues',
 		done: false,
 		date: '2017-05-16'
 	},
 	{
 		id: 3,
-		text: 'Sleep outside',
+		text: 'Crash update',
+		done: true,
+		date: '2017-05-15'
+	},
+	{
+		id: 4,
+		text: 'Visual UI Update Review',
+		done: false,
+		date: '2017-05-13'
+	},
+	{
+		id: 5,
+		text: 'Sidebar update',
+		done: true,
+		date: '2017-05-13'
+	},
+	{
+		id: 6,
+		text: 'Crash issue',
+		done: false,
+		date: '2017-05-14'
+	},
+	{
+		id: 7,
+		text: 'Visual update & crash resolve',
 		done: true,
 		date: '2017-05-15'
 	}

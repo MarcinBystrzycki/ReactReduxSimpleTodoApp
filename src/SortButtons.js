@@ -10,21 +10,21 @@ const SortButtons = ({todos}) => (
 		<li className="SortButtons">
 			<FilterButtons filter="SHOW_ALL">
 				<FaFolderOpenO className="FaSortButtonsIcons"/>
-				All
+				{'All'}
 				<span>{todos.length}</span>
 			</FilterButtons>
 		</li>
 		<li className="SortButtons">
 			<FilterButtons filter="SHOW_OPEN">
 				<FaInfoCircle className="FaSortButtonsIcons"/>
-				OPEN
+				{'Open'}
 				<span>{todos.filter(item => !item.done).length}</span>
 			</FilterButtons>
 		</li>
 		<li className="SortButtons">
 			<FilterButtons filter="SHOW_CLOSED"> 
 				<FaCheckCircle className="FaSortButtonsIcons"/>
-				CLOSED
+				{'Closed'}
 				<span>{todos.filter(item => item.done).length}</span>
 			</FilterButtons>
 		</li>

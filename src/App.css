@@ -1,10 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
 .AppDiv {
   display: flex;
-
+  display: -webkit-flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-right: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
 }
 
 .SortButtonsDiv {
-  width: 15%;
+  width: 40%;
   height: 100vh;
   background-color: #2A2F3A;
 }
@@ -16,8 +26,7 @@
 
 .TodoListDiv {
   width: 85%;
-  height: 100vh;
-  padding: 20px;
+  padding: 25px;
   background-color: #f7f7f7;
 }
 
@@ -26,18 +35,36 @@
 }
 
 .Logo {
-  -webkit-animation: logo-spin 3s infinite;
-  animation: logo-spin 3s infinite;
   color: white;
   text-shadow: 3px 3px 3px black;
+}
+.Spin {
+  animation: logo-spin 3s infinite;
+  -webkit-animation: logo-spin 3s infinite;
+  display: inline-block;
+}
+
+.AddTodo {
+  margin-left: 10px;
 }
 
 .AddTodo input:first-of-type {
   height: 18px;
+  min-width: 310px;
 }
 
 .AddTodo button {
   height: 24px;
+  border: none;
+  cursor: pointer;
+  background-color: #2A2F3A;
+  color: white;
+  padding: 0 15px;
+  transition: .2s;
+}
+
+.AddTodo button:hover {
+  background-color: #38445e;
 }
 
 .TodoList {
@@ -49,13 +76,14 @@
   list-style-type: none;
   line-height: 50px;
   height: 50px;
-  width: 500px;
+  max-width: 500px;
   border: 1px solid #d3d3d3;
   border-radius: 5px;
   padding-left: 10px;
   margin: 10px;
   background-color: white;
   transition: .2s;
+  cursor: pointer;
 }
 .Todo:hover {
   border: 1px solid black;
@@ -63,15 +91,15 @@
 
 .Star {
   position: absolute;
-  right: 10%;
+  right: 8%;
   top: 25%;
-  color: #ffcc00;
+  color: black;
   font-size: 25px;
 }
 
 .StarO {
   position: absolute;
-  right: 10%;
+  right: 8%;
   top: 25%;
   color: lightgrey;
   font-size: 25px;
@@ -91,7 +119,6 @@
   color: black;
 }
 
-
 .ShowLink {
   text-align: left;
   width: 100%;
@@ -100,10 +127,16 @@
   border: none;
   color: white;
   cursor: pointer;
+  font-size: 20px;
+  transition: .2s;
 }
 
 .ShowLink:hover {
   background-color: #38445e;
+}
+
+.ShowLink span {
+  color: grey;
 }
 
 .SortButtons {
@@ -121,7 +154,46 @@
 }
 
 @keyframes logo-spin {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+  from { transform: rotateY(0deg); 
+         color: white;
+       }
+  to { transform: rotateY(360deg); 
+       color: #ffcc00;
+     }
+}
+
+@media (max-width: 600px) {
+  .AppDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .Logo {
+    font-size: 10px;
+  }
+  .TodoListDiv {
+    width: 100%;
+    padding: 25px 0 0 0;
+  }
+  .Todo {
+    text-align: left;
+    margin: 10px auto;
+  }
+  .TodoListWrapper {
+    text-align: center;
+  }
+  .AddTodo form {
+    margin: 0 auto;
+  }
+  .SortButtonsDiv {
+    width: 100%;
+    height: auto;
+  }
+  .SortButtonsDiv ul {
+    width: 100%;
+    margin: 0;
+  }
+  .SortButtonsDiv li {
+    display: inline-block;
+    width: 33%;
+  }
 }

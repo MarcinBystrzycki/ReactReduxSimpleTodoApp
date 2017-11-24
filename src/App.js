@@ -10,7 +10,7 @@ const App = () => {
     <div className="AppDiv">
     	<div className="SortButtonsDiv">
     		<div className="LogoDiv">
-    			<h3 className="Logo">React + Redux TodoApp</h3>
+    			<h3 className="Logo">React <span className="Spin">+</span> Redux TodoApp</h3>
     		</div>
     		<SortButtons />
     	</div>
