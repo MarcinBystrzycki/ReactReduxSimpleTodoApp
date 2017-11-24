@@ -1,18 +1,19 @@
-import { connect } from 'react-redux';
-import { filterTodos } from './filterTodos';
-import ShowLink from './ShowLink';
+import React from 'react';
+import { toggleFilter } from './actions';
+import { store } from './index.js';
 
-const mapStateToProps = (state, props) => ({
-	active: props.filter === state.filterTodos
-});
-
-const mapDispatchToProps = (dispatch, props) => ({
-	onClick: () => {dispatch(filterTodos(props.filter))}
-});
-
-const FilterButtons = connect(
-	mapStateToProps,
-	mapDispatchToProps
-)(ShowLink);
+const FilterButtons = ({children, onClick, filter, dispatch}) => {
+	return (
+		<button
+			className="ShowLink"
+			onClick={(e) => {
+				e.preventDefault()
+				store.dispatch(toggleFilter(filter))
+			}}
+		>
+			{children}
+		</button>
+	)
+}
 
 export default FilterButtons;

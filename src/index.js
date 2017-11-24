@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import reducer from './reducer.js';
 import DevTools from './DevTools.js';
 
-const store = createStore(
+export const store = createStore(
 	reducer,
 	DevTools.instrument()
 );

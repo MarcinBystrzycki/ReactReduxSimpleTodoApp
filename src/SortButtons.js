@@ -1,11 +1,33 @@
 import React from 'react';
-import ShowLink from './ShowLink';
+import FilterButtons from './FilterButtons';
+import './App.css';
+import FaFolderOpenO from 'react-icons/lib/fa/folder-open-o';
+import FaInfoCircle from 'react-icons/lib/fa/info-circle';
+import FaCheckCircle from 'react-icons/lib/fa/check-circle';
 
-const SortButtons = () => (
+const SortButtons = ({todos}) => (
 	<ul>
-		<li className="SortButtons"><ShowLink filter="SHOW_ALL">All</ShowLink></li>
-		<li className="SortButtons"><ShowLink filter="SHOW_OPEN">OPEN</ShowLink></li>
-		<li className="SortButtons"><ShowLink filter="SHOW_CLOSED">CLOSED</ShowLink></li>
+		<li className="SortButtons">
+			<FilterButtons filter="SHOW_ALL">
+				<FaFolderOpenO className="FaSortButtonsIcons"/>
+				All
+				<span>{todos.length}</span>
+			</FilterButtons>
+		</li>
+		<li className="SortButtons">
+			<FilterButtons filter="SHOW_OPEN">
+				<FaInfoCircle className="FaSortButtonsIcons"/>
+				OPEN
+				<span>{todos.filter(item => !item.done).length}</span>
+			</FilterButtons>
+		</li>
+		<li className="SortButtons">
+			<FilterButtons filter="SHOW_CLOSED"> 
+				<FaCheckCircle className="FaSortButtonsIcons"/>
+				CLOSED
+				<span>{todos.filter(item => item.done).length}</span>
+			</FilterButtons>
+		</li>
 	</ul>
 );
 

@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from './actions';
+import './App.css';
 
 let AddTodo = ({ dispatch }) => {
 	let input;
 	let date;
 
 	return (
-		<div>
+		<div className="AddTodo">
 			<form onSubmit={(e) => {
 				e.preventDefault()
 				if (!input.value.trim()) {
