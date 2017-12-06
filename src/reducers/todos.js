@@ -1,8 +1,10 @@
 import {
 	ADD_TODO,
+	EDIT_TODO,
 	REMOVE_DAY,
 	REMOVE_TODO,
-	TOGGLE_TODO } from './actions.js';
+	TOGGLE_TODO,
+	FILTER_TODOS_VIA_LIST } from '../actions/actions.js';
 
 const initialState = [
 	{
@@ -56,8 +58,16 @@ const todos = (state = initialState, action) => {
 				id: action.id,
 				text: action.text,
 				done: false,
-				date: action.date
+				date: action.date,
+				list: action.list
 			}, ...state];
+		case EDIT_TODO:
+			return state.map(todo => {
+				if (todo.id === action.id) {
+					return {...todo, text: action.text}
+				}
+				return todo;
+			})
 		case REMOVE_DAY:
 			return state.filter(day => day.date !== action.date);
 		case REMOVE_TODO:
@@ -68,7 +78,9 @@ const todos = (state = initialState, action) => {
 					return {...todo, done: !todo.done}
 				}
 				return todo;
-			})
+			});
+		case FILTER_TODOS_VIA_LIST:
+			return state.filter(todo => todo.list !== action.list);
 		default:
 			return state;
 	}

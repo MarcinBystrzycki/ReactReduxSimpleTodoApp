@@ -1,8 +1,8 @@
 import React from 'react';
-import { toggleFilter } from './actions';
-import { store } from './index.js';
+import { toggleFilter } from '../actions/actions';
+import { store } from '../index.js';
 
-const FilterButtons = ({children, onClick, filter, dispatch}) => {
+const FilterButtons = ({children, onClick, filter, active , dispatch}) => {
 	return (
 		<button
 			className="ShowLink"

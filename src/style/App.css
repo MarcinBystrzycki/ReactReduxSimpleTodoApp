@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  font-family: 'Open Sans', sans-serif !important;
+  padding: 0;
+  margin: 0;
+}
+
+.AppDiv {
+  display: flex;
+  display: -webkit-flex;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  border-right: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+}
+
+.SortButtonsDiv {
+  width: 40%;
+  min-height: 100vh;
+  background-color: #2A2F3A;
+  position: relative;
+}
+
+.SortButtonsDiv ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.TodoListDiv {
+  width: 85%;
+  padding: 25px;
+  background-color: #f7f7f7;
+}
+
+.LogoDiv {
+  text-align: center;
+}
+
+.Logo {
+  color: white;
+  text-shadow: 3px 3px 3px black;
+}
+
+.Spin {
+  animation: logo-spin 3s infinite;
+  -webkit-animation: logo-spin 3s infinite;
+  display: inline-block;
+}
+
+.AddTodo {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.AddTodo button {
+  height: 34px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #2A2F3A;
+  color: white;
+  padding: 0 15px;
+  transition: .2s;
+}
+
+.AddTodo button:hover {
+  background-color: #38445e;
+}
+
+.TodoList {
+  padding-left: 0;
+}
+
+.Todo {
+  position: relative;
+  list-style-type: none;
+  line-height: 50px;
+  height: 50px;
+  max-width: 500px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin: 10px;
+  background-color: white;
+  transition: .2s;
+}
+.Todo:hover {
+  border: 1px solid black;
+}
+
+.TodoInput, .DatePicker, .SelectList {
+  margin-right: 5px;
+}
+
+.Star {
+  position: absolute;
+  right: 10%;
+  top: 25%;
+  font-size: 25px;
+  cursor: pointer;
+  color: rgba(255, 204, 0, 0.5)
+}
+.Star:hover {
+  color: rgba(255, 204, 0, 1);
+}
+
+.StarO {
+  position: absolute;
+  right: 10%;
+  top: 25%;
+  color: lightgrey;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.StarO:hover {
+  color: black;
+}
+
+.RemoveTodoButton, .EditTodoButton {
+  position: absolute;
+  border-radius: 5px;
+  right: 0;
+  top: 0;
+  color: #d3d3d3;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.EditTodoButton {
+  right: 15px;
+  top: 1px;
+}
+
+.RemoveDayButton {
+  color: #d3d3d3;
+  transition: .3s;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  font-size: 25px;
+}
+
+.RemoveTodoButton:active, .RemoveTodoButton:hover, .RemoveDayButton:active, .RemoveDayButton:hover, .EditTodoButton:active, .EditTodoButton:hover {
+  color: black;
+}
+
+.ShowLink {
+  text-align: left;
+  padding-left: 20%;
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: .2s;
+}
+
+.ShowLink span {
+  color: grey;
+}
+
+.SortButtons {
+  list-style-type: none;
+  position: relative;
+}
+
+.SortButtons span {
+  position: absolute;
+  right: 10%;
+}
+
+.FaSortButtonsIcons {
+  position: absolute;
+  top: 30%;
+  left: 6%;
+}
+
+.SelectList {
+  max-width: 220px;
+}
+
+.DatePicker {
+
+}
+
+@keyframes logo-spin {
+  from { transform: rotateY(0deg); 
+         color: white;
+       }
+  to { transform: rotateY(360deg); 
+       color: #ffcc00;
+     }
+}
+
+
+.AddListButton {
+  position: absolute;
+  right: 20px;
+  border-radius: 50%;
+  border: none;
+  font-size: 45px;
+  line-height: 45px;
+  padding: 0;
+  transition: .2s;
+}
+
+.AddListButton:hover {
+  background-color: #ffcc00;
+  color: white;
+}
+
+.ListsDiv {
+  margin-top: 100px;
+}
+
+.YourLists li {
+  list-style-type: none;
+  position: relative;
+}
+
+.YourList {
+  text-align: left;
+  padding-left: 20%;
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: .2s;
+}
+
+.ListsHeader {
+  color: white;
+  text-align: center;
+}
+
+.YourListIcon, .RemoveListButton {
+  color: white;
+  position: absolute;
+  top: 33%;
+  font-size: 20px;
+}
+
+.RemoveListButton {
+  right: 8%;
+  color: grey;
+  cursor: pointer;
+}
+
+.RemoveListButton:hover {
+  color: white;
+}
+
+.YourListIcon {
+  left: 6%;
+}
+
+.AddYourList {
+  display: none;
+  padding: 0 2px;
+}
+
+/* bootstrap classes */
+.modal-dialog {
+  position: fixed;
+  top: 30%;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: #F7F7F7 !important;
+  }
+  .AppDiv {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    flex-direction: -webkit-column;
+    border: none;
+  }
+  .ListsDiv {
+    margin-top: 0;
+  }
+  .ListsHeader {
+    display: none;
+  }
+  .AddListDiv {
+    margin-bottom: -1px;
+  }
+  .Logo {
+    font-size: 10px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: 2px;
+    margin: 0;
+    text-align: left;
+  }
+  .LogoDiv {
+    background-color: black;
+  }
+  .TodoListDiv {
+    width: 100%;
+    padding: 25px 0 0 0;
+  }
+  .AddYourList {
+    display: inline;
+  }
+  .Todo {
+    text-align: left;
+    margin: 10px 5px;
+  }
+  .TodoListWrapper {
+    text-align: center;
+  }
+  .AddTodo form {
+    margin: 0 auto;
+  }
+  .AddListButton {
+    position: static;
+    text-align: right;
+    font-size: 10px;
+    line-height: 15px;
+    height: 15px;
+    border-radius: 0;
+    margin-top: -5px;
+  }
+  .FaPlus {
+    font-size: 10px;
+  }
+  .SortButtonsDiv {
+    width: 100%;
+    min-height: 0;
+    height: auto;
+  }
+  .SortButtonsDiv ul {
+    width: 100%;
+    margin: 0;
+  }
+  .SortButtonsDiv li {
+    display: inline-block;
+    width: 33%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ShowLink, .YourList, .YourListIcon {
+    font-size: 1em;
+  }
+  .FaSortButtonsIcons, .YourListIcon {
+    top: 40%;
+  }
+}

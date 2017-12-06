@@ -1,26 +1,29 @@
 import React from 'react';
-import './App.css';
+import '../style/App.css';
 import FaStarO from 'react-icons/lib/fa/star-o';
 import FaStar from 'react-icons/lib/fa/star';
 import FaClose from 'react-icons/lib/fa/close';
+import EditTodo from './EditTodo';
 
-const Todo = ({id, text, done, date, onClick, buttonClick}) => {
+const Todo = ({id, done, text, date, onClick, buttonClick}) => {
 	const Star = () => {
 		if (!done) {
-			return <FaStarO className="StarO"/>
+			return <FaStarO className="StarO" onClick={onClick} />
 		} else {
-			return <FaStar className="Star"/>
+			return <FaStar className="Star" onClick={onClick}/>
 		}
 	}
 
 	return (
 		<li
 			className="Todo"
-			onClick={onClick}
+			
 			date={date}
+			id={id}
 			>
 				{text}
-			<Star />
+			<EditTodo id={id}/>
+			<Star onClick={onClick}/>
 			<FaClose className="RemoveTodoButton" onClick={buttonClick} />
 		</li>
 	)

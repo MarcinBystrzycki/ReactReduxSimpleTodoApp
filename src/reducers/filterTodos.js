@@ -1,4 +1,4 @@
-import { TOGGLE_FILTER } from './actions.js';
+import { TOGGLE_FILTER } from '../actions/actions';
 
 const filterTodos = (state = 'SHOW_ALL', action) => {
 	switch(action.type) {
