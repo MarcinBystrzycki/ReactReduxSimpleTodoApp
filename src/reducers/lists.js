@@ -5,9 +5,7 @@ const lists = (state = [], action) => {
 		case ADD_LIST:
 			return [{
 				id: action.id,
-				title: action.title,
-				active: false,
-				todos: []
+				title: action.title
 			}, ...state];
 		case REMOVE_LIST:
 			return state.filter(list => list.id !== action.id);

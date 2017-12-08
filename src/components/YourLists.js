@@ -12,6 +12,7 @@ const YourLists = ({lists, removeList, dispatch, filterTodosViaList, filter}) =>
 			<ul className="YourLists">
 				{lists.map(list => 
 					<li key={list.id}>
+						
 						<button className="YourList" 
 							style={{
 							    backgroundColor: filter === list.id ? '#38445e' : 'transparent'
@@ -26,7 +27,7 @@ const YourLists = ({lists, removeList, dispatch, filterTodosViaList, filter}) =>
 						<FaClose className="RemoveListButton" 
 							onClick={() => {
 								removeList(list.id)
-								filterTodosViaList(list.title)
+								filterTodosViaList(list.id)
 							}}/>
 					</li>
 				)}

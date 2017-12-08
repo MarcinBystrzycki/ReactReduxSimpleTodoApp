@@ -61,8 +61,6 @@ export function addList(title) {
 	return {
 		type: ADD_LIST,
 		id: uuid.v4(),
-		todos: [],
-		active: false,
 		title
 	};
 };

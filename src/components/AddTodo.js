@@ -53,13 +53,13 @@ let AddTodo = ({ dispatch, lists }) => {
 								title = select
 							}}>
 							<option value='' selected>Select your list</option>
-							{lists.map(list => <option key={uuid.v4()} value={list.title}>{list.title}</option>)}
+							{lists.map(list => <option key={uuid.v4()} listId={list.id} value={list.id}>{list.title}</option>)}
 						</select>
-						<button type="submit"><FaPlus /></button>
+						
 					</div>
 
 				</div>
-				
+					<button type="submit"><FaPlus /></button>
 			</form>
 			<hr />
 		</div>
