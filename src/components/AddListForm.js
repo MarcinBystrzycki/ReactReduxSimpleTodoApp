@@ -18,6 +18,7 @@ let AddListForm = ({ dispatch }) => {
 				ref = {node => {
 					input = node
 				}}
+				autoFocus
 				required
 			/>
 			<button type="submit">Add</button>

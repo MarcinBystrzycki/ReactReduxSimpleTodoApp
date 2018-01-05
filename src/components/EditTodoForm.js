@@ -17,6 +17,7 @@ let EditTodoForm = ({ dispatch, props, id }) => {
 				input.value = ''
 			}}>
 				<input 
+					autoFocus
 					ref = {node => {
 						input = node
 					}}
