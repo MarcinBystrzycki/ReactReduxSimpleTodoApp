@@ -59,7 +59,9 @@ let AddTodo = ({ dispatch, lists }) => {
 					</div>
 
 				</div>
+				<div className="AddButtonContainer">
 					<button type="submit"><FaPlus /></button>
+				</div>
 			</form>
 			<hr />
 		</div>
